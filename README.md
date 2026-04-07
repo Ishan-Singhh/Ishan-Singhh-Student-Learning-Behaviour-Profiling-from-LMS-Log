@@ -5,10 +5,14 @@ This project aims to profile student learning behavior from the OULAD (Open Univ
 ## Structure
 - `dataset/` - OULAD raw CSV files.
 - `merged.csv` - Preprocessed and combined dataset generated from the core CSVs.
+- `features.csv` - Engineered features dataset used for clustering.
 - `models/` - Directory for saved Joblib/Pickle models.
 - `outputs/figures/` - Directory for generated plots and visualizations.
 - `preprocessing.ipynb` - Notebook dedicated to data loading, merging, and initial preprocessing.
-- `main.ipynb` - The primary notebook for feature engineering, unsupervised modeling (clustering), evaluation, and visualization.
+- `feature_engineering.ipynb` - Notebook for extracting key behavioral features.
+- `clustering.ipynb` - Notebook for unsupervised modeling (KMeans, Hierarchical, DBSCAN, GMM) and evaluation.
+- `visualization.ipynb` *(Pending)* - Notebook for PCA/UMAP embeddings and visual feature distributions.
+- `ethical_analysis.ipynb` *(Pending)* - Notebook for interpreting clusters and defining student profiles.
 
 
 ## Workflow
