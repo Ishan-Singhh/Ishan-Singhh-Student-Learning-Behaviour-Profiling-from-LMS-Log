@@ -2,6 +2,11 @@
 
 This project aims to profile student learning behavior from the OULAD (Open University Learning Analytics Dataset) using unsupervised learning techniques. The goal is to cluster students based on their VLE interaction logs and assessment scores.
 
+## Dataset
+- **Source:** OULAD (Open University Learning Analytics Dataset)  
+- Contains student interaction logs, assessment scores, and demographic information  
+
+
 ## Structure
 - `dataset/` - OULAD raw CSV files.
 - `merged.csv` - Preprocessed and combined dataset generated from the core CSVs.
@@ -10,9 +15,7 @@ This project aims to profile student learning behavior from the OULAD (Open Univ
 - `outputs/figures/` - Directory for generated plots and visualizations.
 - `preprocessing.ipynb` - Notebook dedicated to data loading, merging, and initial preprocessing.
 - `feature_engineering.ipynb` - Notebook for extracting key behavioral features.
-- `clustering.ipynb` - Notebook for unsupervised modeling (KMeans, Hierarchical, DBSCAN, GMM) and evaluation.
-- `visualization.ipynb` *(Pending)* - Notebook for PCA/UMAP embeddings and visual feature distributions.
-- `ethical_analysis.ipynb` *(Pending)* - Notebook for interpreting clusters and defining student profiles.
+- `clustering_and_visualization.ipynb` - Notebook for unsupervised modeling (KMeans, Hierarchical, DBSCAN, GMM) and evaluation, PCA/UMAP embeddings and visual feature distributions, and interpreting clusters and defining student profiles.
 
 
 ## Workflow
@@ -22,3 +25,51 @@ This project aims to profile student learning behavior from the OULAD (Open Univ
 3. **Unsupervised Modelling** - Implements KMeans, Hierarchical Clustering, DBSCAN and Gaussian Mixture Models with rigorous evaluation via Silhouette Score, Davies-Bouldin, and Calinski-Harabasz Indices.
 4. **Visualization** - Shows 2D PCA/UMAP embeddings, radar charts, and feature distributions.
 5. **Ethics & Interpretations** - Translates mathematical clusters into actionable student profiles for intervention purposes.
+
+## Technologies Used
+- Python (Pandas, NumPy, Scikit-learn)  
+- Matplotlib, Seaborn  
+- PCA, T-SNE  
+- KMeans, DBSCAN
+
+### Feature Engineering Summary
+
+The engineered features capture multiple dimensions of student behavior:
+- Engagement (login frequency, clicks)
+- Consistency (activity regularity)
+- Discipline (submission delay)
+- Performance (average score)
+
+These features enable meaningful clustering of students into behavioral groups.
+
+### Cluster Interpretation
+
+Cluster 0: Passive Learners
+- Low engagement and interaction
+- Lower academic performance
+- Likely to require intervention
+
+Cluster 1: High Performers
+- Very high engagement and activity
+- Submit assignments early
+- Achieve highest scores
+
+Cluster 2: Moderate Learners
+- Balanced engagement and performance
+- Consistent but not highly active
+
+
+### Key Insights
+
+- Students with higher engagement (clicks, login frequency) perform better
+- Early submission correlates with higher scores
+- Low activity students form a distinct cluster of at-risk learners
+- Behavioral patterns can be used to predict academic success
+
+
+### Ethical & Societal Relevance
+
+- Helps identify students needing academic support early
+- Enables personalized learning strategies
+- Improves student retention and success rates
+- Must ensure data privacy and avoid bias in interpretation
