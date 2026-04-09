@@ -11,19 +11,17 @@ This project aims to profile student learning behavior from the OULAD (Open Univ
 - `dataset/` - OULAD raw CSV files.
 - `merged.csv` - Preprocessed and combined dataset generated from the core CSVs.
 - `features.csv` - Engineered features dataset used for clustering.
-- `models/` - Directory for saved Joblib/Pickle models.
-- `outputs/figures/` - Directory for generated plots and visualizations.
 - `preprocessing.ipynb` - Notebook dedicated to data loading, merging, and initial preprocessing.
 - `feature_engineering.ipynb` - Notebook for extracting key behavioral features.
-- `clustering_and_visualization.ipynb` - Notebook for unsupervised modeling (KMeans, Hierarchical, DBSCAN, GMM) and evaluation, PCA/UMAP embeddings and visual feature distributions, and interpreting clusters and defining student profiles.
+- `clustering_and_visualization.ipynb` - Notebook for unsupervised modeling (KMeans, DBSCAN) and evaluation, PCA/T-SNE embeddings and visual feature distributions, and interpreting clusters and defining student profiles.
 
 
 ## Workflow
 
 1. **Data Understanding & Preprocessing** - Loads and merges VLE interaction logs with demographic data.
 2. **Feature Engineering** - Extracts key features like login frequency, activity regularity, submission delays, and early engagement proportion.
-3. **Unsupervised Modelling** - Implements KMeans, Hierarchical Clustering, DBSCAN and Gaussian Mixture Models with rigorous evaluation via Silhouette Score, Davies-Bouldin, and Calinski-Harabasz Indices.
-4. **Visualization** - Shows 2D PCA/UMAP embeddings, radar charts, and feature distributions.
+3. **Unsupervised Modelling** - Implements KMeans and DBSCAN with rigorous evaluation via Silhouette Score, Davies-Bouldin, and Calinski-Harabasz Indices.
+4. **Visualization** - Shows 2D PCA/T-SNE embeddings, radar charts, and feature distributions.
 5. **Ethics & Interpretations** - Translates mathematical clusters into actionable student profiles for intervention purposes.
 
 ## Technologies Used
